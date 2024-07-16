@@ -27,7 +27,7 @@ h1 {
   width: 70%;
   background-color: #24232c;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: white;
   flex-shrink: 0;
 }
@@ -281,11 +281,19 @@ h1 {
   }
   .passGen__outputwrapper {
     /* border: 2px solid green; */
-    min-height: 3.5rem;
+    min-height: 3.8rem;
+    justify-content: start;
   }
   .passGen__outputwrapper > input {
     width: 70%;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+  }
+  .passGen__outputwrapper > span {
+    width: 30%;
+  }
+  .passGen__outputwrapper > span > svg {
+    width: 1.4rem;
+    height: 1.4rem;
   }
   .passGen__controlswrapper {
     padding: 0.5rem 0.9rem;
