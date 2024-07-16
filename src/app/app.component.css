@@ -85,6 +85,7 @@ h1 {
 #passlength::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
+  background-color: white;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
@@ -248,7 +249,7 @@ h1 {
   border: 2px solid #a4ffaf;
   cursor: pointer;
 }
-#passlength::-webkit-slider-thumb {
+#passlength::-webkit-slider-thumb:hover {
   background-color: #18171f;
   border: 2px solid #a4ffaf;
   cursor: pointer;
