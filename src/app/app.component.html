@@ -1,10 +1,23 @@
 <h1>Password Generator</h1>
 <div class="passGen__container">
   <div class="passGen__outputwrapper">
-    <input type="text" id="output" placeholder="P4$5W0rD!" disabled [value]="generatedPass" #tocopy/>
+    <input
+      type="text"
+      id="output"
+      placeholder="P4$5W0rD!"
+      disabled
+      [value]="generatedPass"
+      #tocopy
+    />
     <span>
-      <p id="copied" [style.visibility]="isCopied ? 'visible' : 'hidden'" >COPIED</p>
-      <img src="../assets/icon-copy.svg" alt="copy icon" (click)="copyPassword()" />
+      <p id="copied" [style.visibility]="isCopied ? 'visible' : 'hidden'">
+        COPIED
+      </p>
+      <img
+        src="../assets/icon-copy.svg"
+        alt="copy icon"
+        (click)="copyPassword()"
+      />
     </span>
   </div>
   <!-- controls section -->
@@ -76,12 +89,12 @@
     <div class="passGen__passStrength space">
       <p>STRENGTH</p>
       <div class="strenghtInd-wrapper">
-        <p id="passStrengthText">MEDIUM</p>
-        <div class="indicators">
+        <p id="passStrengthText">{{ passStrenth }}</p>
+        <div class="indicators" #indicators [attr.passStrength]="indicator">
           <span id="firstIndicator"></span>
-          <span id="firstIndicator"></span>
-          <span id="firstIndicator"></span>
-          <span id="firstIndicator"></span>
+          <span id="secondIndicator"></span>
+          <span id="thirdIndicator"></span>
+          <span id="forthIndicator"></span>
         </div>
       </div>
     </div>

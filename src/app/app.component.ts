@@ -12,7 +12,22 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
   // this is for slider range value
   rangeValue: number = 0;
+  // generated password value
   generatedPass: string = '';
+  // password strength value
+  passStrenth: string = 'MEDIUM';
+  // password strength color indicator value
+  indicator: string = 'strong';
+  // Regex to test password strength
+  // weak
+  Weak: RegExp =
+    /^(?:(?:[a-z]{8,})|(?:[A-Z]{8,})|(?:\d{8,})|(?:[!@#$%^&*()_+{}\[\]:;"'|\\,.<>\/?`~\-]{8,}))$/;
+  // medium
+  medium: RegExp =
+    /^(?=.*[a-z])(?=.*[A-Z])|(?=.*[a-z])(?=.*\d)|(?=.*[a-z])(?=.*[!@#$%^&*()_+{}\[\]:;"'|\\,.<>\/?`~\-])|(?=.*[A-Z])(?=.*\d)|(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;"'|\\,.<>\/?`~\-])|(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;"'|\\,.<>\/?`~\-]).{8,}$/;
+  // strong
+  strong: RegExp =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;"'|\\,.<>\/?`~\-])|(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;"'|\\,.<>\/?`~\-])|(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;"'|\\,.<>\/?`~\-]).{12,}$/;
 
   // checkbox options
   includeUppercase: boolean = false;
@@ -60,6 +75,25 @@ export class AppComponent {
       password += chars[randomIndex];
     }
 
+    // Displays pass word strenth indicator colors depending on strength
+    if (password.length < 8) {
+      this.passStrenth = 'TOO WEAK';
+      this.indicator = 'TooWeak';
+    }
+    if (password.match(this.Weak)) {
+      this.indicator = 'weak';
+      this.passStrenth = 'WEAK';
+    }
+    if (password.match(this.medium)) {
+      this.indicator = 'medium';
+      this.passStrenth = 'MEDIUM';
+    }
+    if (password.match(this.strong)) {
+      this.indicator = 'strong';
+      this.passStrenth = 'STRONG';
+    }
+
+    // assign the generated password to be displayed in the template
     this.generatedPass = password;
   }
 
