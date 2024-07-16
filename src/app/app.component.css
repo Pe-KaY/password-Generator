@@ -40,10 +40,9 @@ h1 {
   gap: 0.5rem;
   font-size: 0.8rem;
   color: #a4ffaf;
-  /* border: 2px solid red; */
 }
 
-.passGen__outputwrapper > span > svg {
+.passGen__outputwrapper > span > button > svg {
   width: 1.8rem;
   height: 1.8rem;
   fill: #a4ffaf;
@@ -120,6 +119,7 @@ h1 {
   display: grid;
   place-items: center;
   cursor: pointer;
+  background-color: #18171f;
 }
 .checkbox:hover {
   border: 2px solid #a4ffaf;
@@ -238,7 +238,7 @@ h1 {
   border: 2px solid #a4ffaf;
 }
 
-.passGen__outputwrapper > span > svg:hover {
+.passGen__outputwrapper > span > button:hover > svg {
   fill: white;
   cursor: pointer;
 }
@@ -265,4 +265,3 @@ h1 {
   fill: #a4ffaf;
 }
 /* MEDIA QUERY */
-
