@@ -20,3 +20,17 @@ body {
 }
 
 /* styles end here */
+
+@media (max-width: 498px) {
+  .passGen__outputwrapper > input {
+    width: 70%;
+    font-size: 1.1rem;
+  }
+  .passGen__outputwrapper > span {
+    width: 30%;
+  }
+  .passGen__outputwrapper > span > svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
