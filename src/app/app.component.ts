@@ -17,7 +17,7 @@ export class AppComponent {
   // password strength value
   passStrenth: string = 'MEDIUM';
   // password strength color indicator value
-  indicator: string = 'strong';
+  indicator: string = 'medium';
   // Regex to test password strength
   // weak
   Weak: RegExp =
@@ -78,7 +78,7 @@ export class AppComponent {
     // Displays pass word strenth indicator colors depending on strength
     if (password.length < 8) {
       this.passStrenth = 'TOO WEAK';
-      this.indicator = 'TooWeak';
+      this.indicator = 'tooWeak';
     }
     if (password.match(this.Weak)) {
       this.indicator = 'weak';
@@ -100,8 +100,6 @@ export class AppComponent {
   // copy Password to clipboard function
   isCopied: boolean = false;
   copyPassword() {
-    // toggle Copied text
-    this.isCopied = true;
     // Select the text inside the input field
     this.tocopy.nativeElement.select();
     this.tocopy.nativeElement.setSelectionRange(0, 99999); // For mobile devices
@@ -110,7 +108,8 @@ export class AppComponent {
     navigator.clipboard
       .writeText(this.tocopy.nativeElement.value)
       .then(() => {
-        console.log('Text copied to clipboard');
+        // toggle Copied text
+        this.isCopied = true;
       })
       .catch((err) => {
         console.error('Failed to copy text to clipboard:', err);
