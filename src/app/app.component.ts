@@ -79,6 +79,9 @@ export class AppComponent {
     if (password.length < 8) {
       this.passStrenth = 'TOO WEAK';
       this.indicator = 'tooWeak';
+      // assign the generated password to be displayed in the template
+      this.generatedPass = password;
+      return;
     }
     if (password.match(this.Weak)) {
       this.indicator = 'weak';
