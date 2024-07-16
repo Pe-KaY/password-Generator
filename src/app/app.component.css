@@ -213,7 +213,7 @@ h1 {
 .indicators[passStrength="weak"] > #firstIndicator {
   background-color: #f64a4a;
 }
-.indicators[passStrength="weak"] > #secondtIndicator {
+.indicators[passStrength="weak"] > #secondIndicator {
   background-color: #f64a4a;
 }
 
