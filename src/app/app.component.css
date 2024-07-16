@@ -265,49 +265,4 @@ h1 {
   fill: #a4ffaf;
 }
 /* MEDIA QUERY */
-@media (max-width: 498px) {
-  .passGen__container {
-    width: 20rem;
-  }
-  .passGen__outputwrapper {
-    /* border: 2px solid green; */
-    min-height: 3.8rem;
-    justify-content: start;
-  }
-   .passGen__outputwrapper > input {
-    width: 70%;
-    font-size: 1.1rem;
-  }
-  .passGen__outputwrapper > span {
-    width: 30%;
-  }
-  .passGen__outputwrapper > span > svg {
-    width: 1.4rem;
-    height: 1.4rem;
-  } 
-  .passGen__controlswrapper {
-    padding: 0.5rem 0.9rem;
-    height: fit-content;
-  }
-  #lengthcount {
-    font-size: 1.2rem;
-  }
-  .includetext {
-    font-size: 0.9rem;
-  }
-  #passStrengthText {
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
-  .indicators {
-    gap: 0.2rem;
-  }
-  /* actuall indicators */
-  .indicators > span {
-    width: 0.4rem;
-  }
-  .passGen__passGenerate {
-    margin-block-start: -0.5rem;
-  }
-}
 
